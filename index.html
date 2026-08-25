@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    詐欺クリック体験
+    ～あなたはその広告、クリックしますか？～
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     STEP 1
+     普通のポータルサイト
+========================================================= -->
+
+<section id="screen-home" class="screen">
+
+  <header class="portal-header">
+
+    <div class="portal-logo">
+      DailyPortal
+    </div>
+
+    <div class="weather">
+      東京　☀ 28℃
+    </div>
+
+    <div class="header-links">
+      ニュース　天気　メール　その他
+    </div>
+
+  </header>
+
+
+  <div class="portal-search">
+
+    <div class="search-logo">
+      DailyPortal
+    </div>
+
+    <div class="search-box">
+
+      <input
+        type="text"
+        placeholder="キーワードを入力"
+      >
+
+      <button type="button">
+        検索
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <nav class="category-bar">
+
+    <span>ニュース</span>
+    <span>スポーツ</span>
+    <span>エンタメ</span>
+    <span>暮らし</span>
+    <span>テクノロジー</span>
+    <span>ショッピング</span>
+
+  </nav>
+
+
+  <main class="portal-main">
+
+    <section class="news-area">
+
+      <div class="section-title">
+        今日の注目ニュース
+      </div>
+
+
+      <article class="news-main">
+
+        <div class="news-photo">
+          話題
+        </div>
+
+        <div>
+
+          <div class="news-tag">
+            FEATURE
+          </div>
+
+          <h1>
+            今知っておきたい
+            2026年の便利なサービス特集
+          </h1>
+
+          <p>
+            毎日の生活をもっと便利にする
+            サービスや最新ニュースを紹介。
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <div class="news-list">
+
+        <div>
+          <span>NEW</span>
+          スマートフォンの便利な新機能を紹介
+        </div>
+
+        <div>
+          <span>話題</span>
+          今週注目されたニュースまとめ
+        </div>
+
+        <div>
+          <span>生活</span>
+          知っていると便利なネットサービス
+        </div>
+
+        <div>
+          <span>特集</span>
+          最新テクノロジーを徹底解説
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <aside class="sidebar">
+
+      <div class="side-heading">
+        PR
+      </div>
+
+
+      <div
+        id="security-ad"
+        class="security-ad"
+        role="button"
+        tabindex="0"
+      >
+
+        <div class="ad-company">
+          SafeCheck
+        </div>
+
+        <div class="ad-small">
+          SECURITY SERVICE
+        </div>
+
+        <h2>
+          あなたのスマホ、
+          <br>
+          今すぐ確認できます
+        </h2>
+
+        <p>
+          約30秒の無料セキュリティ診断
+        </p>
+
+        <div class="ad-button">
+          無料診断を開始
+        </div>
+
+        <div class="ad-footer">
+          今なら完全無料
+        </div>
+
+      </div>
+
+
+      <div class="side-heading">
+        人気の記事
+      </div>
+
+      <div class="small-story">
+        今週のランキング
+      </div>
+
+      <div class="small-story">
+        保存しておきたい便利技
+      </div>
+
+      <div class="small-story">
+        最新アプリまとめ
+      </div>
+
+    </aside>
+
+  </main>
+
+
+  <footer class="portal-footer">
+
+    DailyPortal　｜
+    利用規約　｜
+    プライバシー
+
+  </footer>
+
+</section>
+
+
+
+<!-- =========================================================
+     STEP 1.5
+     ローディング
+========================================================= -->
+
+<section
+  id="screen-loading"
+  class="screen hidden"
+>
+
+  <div class="loading-screen">
+
+    <div class="loading-logo">
+      SafeCheck
+    </div>
+
+    <div class="loading-title">
+      セキュリティ診断を準備しています
+    </div>
+
+    <div class="progress-area">
+
+      <div id="progress-bar"></div>
+
+    </div>
+
+    <div id="loading-text">
+      環境を確認しています…
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     STEP 2
+     スキャン
+========================================================= -->
+
+<section
+  id="screen-scan"
+  class="screen hidden"
+>
+
+  <div class="scan-page">
+
+    <div class="scan-header">
+
+      <div class="scan-logo">
+        SafeCheck
+      </div>
+
+      <div class="scan-secure">
+        SECURE CONNECTION
+      </div>
+
+    </div>
+
+
+    <div class="scan-body">
+
+      <div class="scan-status">
+        SECURITY CHECK
+      </div>
+
+      <h1>
+        お使いの環境を確認しています
+      </h1>
+
+      <p>
+        セキュリティ状態を確認しています。
+        しばらくお待ちください。
+      </p>
+
+
+      <div class="check-row">
+
+        <span>
+          ブラウザ
+        </span>
+
+        <strong class="green">
+          ✓ 完了
+        </strong>
+
+      </div>
+
+
+      <div class="check-row">
+
+        <span>
+          接続状態
+        </span>
+
+        <strong class="green">
+          ✓ 完了
+        </strong>
+
+      </div>
+
+
+      <div class="check-row">
+
+        <span>
+          セキュリティ状態
+        </span>
+
+        <strong id="scan-danger">
+          確認中…
+        </strong>
+
+      </div>
+
+
+      <div
+        id="danger-message"
+        class="danger-message hidden"
+      >
+
+        <div class="danger-title">
+          注意が必要な項目が見つかりました
+        </div>
+
+        <div>
+          安全確認を完了するため、
+          詳細を確認してください。
+        </div>
+
+      </div>
+
+
+      <button
+        id="detail-button"
+        class="danger-button hidden"
+        type="button"
+      >
+        詳細を確認する
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     STEP 3
+     緊急警告
+========================================================= -->
+
+<section
+  id="screen-alert"
+  class="screen hidden"
+>
+
+  <div class="alert-page">
+
+    <div class="alert-top">
+      SafeCheck Security Center
+    </div>
+
+
+    <div class="alert-panel">
+
+      <div class="alert-icon">
+        !
+      </div>
+
+
+      <div class="alert-label">
+        SECURITY ALERT
+      </div>
+
+
+      <h1>
+        重大なセキュリティ通知
+      </h1>
+
+
+      <p class="alert-important">
+        お使いの環境で通常とは異なる状態が
+        確認されました。
+      </p>
+
+
+      <p class="alert-warning">
+        このまま確認を行わない場合、
+        一部のサービスが利用できなくなる
+        可能性があります。
+      </p>
+
+
+      <div class="countdown-box">
+
+        <div class="countdown-title">
+          セキュリティ確認の期限
+        </div>
+
+        <div id="countdown">
+          00:30
+        </div>
+
+        <div class="countdown-sub">
+          今すぐ確認してください
+        </div>
+
+      </div>
+
+
+      <div class="alert-info">
+
+        <div>
+          <span>検出状態</span>
+          <strong>要確認</strong>
+        </div>
+
+        <div>
+          <span>重要度</span>
+          <strong>HIGH</strong>
+        </div>
+
+        <div>
+          <span>推奨対応</span>
+          <strong>今すぐ確認</strong>
+        </div>
+
+      </div>
+
+
+      <div class="fake-login">
+
+        <div class="fake-login-title">
+          本人確認
+        </div>
+
+        <p>
+          安全確認を続けるには、
+          本人確認を行ってください。
+        </p>
+
+
+        <div class="fake-input">
+          メールアドレス
+        </div>
+
+
+        <div class="fake-input">
+          パスワード
+        </div>
+
+
+        <button
+          id="final-warning-button"
+          type="button"
+        >
+          今すぐ本人確認を続ける
+        </button>
+
+      </div>
+
+
+      <div class="tiny-text">
+        SafeCheck Security Service
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     STEP 4
+     正体を明かす
+========================================================= -->
+
+<section
+  id="screen-reveal"
+  class="screen hidden"
+>
+
+  <div class="reveal-page">
+
+    <div class="reveal-badge">
+      LEARNING MODE
+    </div>
+
+
+    <h1>
+      ここでストップです。
+    </h1>
+
+
+    <div class="reveal-main">
+
+      <div class="big-stop">
+
+        これは
+        <strong>自由研究用の模擬サイト</strong>
+        です。
+
+      </div>
+
+
+      <p>
+        ここまでの画面では、
+        フィッシング詐欺などで使われることがある
+        「不安」「緊急性」「無料」「本人確認」
+        などの要素を、安全な範囲で模擬しました。
+      </p>
+
+    </div>
+
+
+    <h2>
+      さっきのサイトを振り返ってみよう
+    </h2>
+
+
+    <div class="explain-grid">
+
+
+      <div class="explain-box">
+
+        <strong>
+          ① 興味を引く広告
+        </strong>
+
+        <p>
+          無料診断という広告で、
+          クリックしたくなるようにしました。
+        </p>
+
+      </div>
+
+
+      <div class="explain-box">
+
+        <strong>
+          ② 不安をあおる
+        </strong>
+
+        <p>
+          「問題が見つかった」と表示して、
+          冷静な判断をしにくくしました。
+        </p>
+
+      </div>
+
+
+      <div class="explain-box">
+
+        <strong>
+          ③ 強い緊急性
+        </strong>
+
+        <p>
+          大きなカウントダウンを表示して、
+          「急がなきゃ」と感じるようにしました。
+        </p>
+
+      </div>
+
+
+      <div class="explain-box">
+
+        <strong>
+          ④ 本人確認
+        </strong>
+
+        <p>
+          「確認」という正当そうな言葉を使って、
+          行動を促しました。
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <button
+      id="to-quiz"
+      class="main-button"
+      type="button"
+    >
+      では、クイズに挑戦する
+    </button>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     STEP 5
+     クイズ
+========================================================= -->
+
+<section
+  id="screen-quiz"
+  class="screen hidden"
+>
+
+  <div class="quiz-page">
+
+    <div class="quiz-label">
+      STEP 2 / QUIZ
+    </div>
+
+
+    <h1>
+      あなたは見抜ける？
+    </h1>
+
+
+    <div class="quiz-counter">
+
+      <span id="question-number">
+        第1問 / 5問
+      </span>
+
+      <span id="question-score">
+        正解 0
+      </span>
+
+    </div>
+
+
+    <div class="quiz-card">
+
+      <h2 id="question-text">
+        読み込み中…
+      </h2>
+
+
+      <div id="answers"></div>
+
+
+      <div
+        id="quiz-result"
+        class="quiz-result hidden"
+      >
+      </div>
+
+
+      <button
+        id="next-question"
+        class="main-button hidden"
+        type="button"
+      >
+        次の問題
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     クイズ全問クリア
+========================================================= -->
+
+<section
+  id="screen-clear"
+  class="screen hidden"
+>
+
+  <div class="clear-page">
+
+    <div class="clear-badge">
+      QUIZ COMPLETE
+    </div>
+
+
+    <div class="clear-icon">
+      ✓
+    </div>
+
+
+    <h1>
+      ALL CLEAR!
+    </h1>
+
+
+    <div class="clear-score">
+
+      <span id="final-score">
+        5
+      </span>
+
+      <small>
+        / 5
+      </small>
+
+    </div>
+
+
+    <p class="clear-message">
+      すべての問題を終えました。
+    </p>
+
+
+    <div class="memory-point">
+
+      <div class="memory-title">
+        今回、一番覚えてほしいこと
+      </div>
+
+      <div class="memory-text">
+
+        <strong>
+          急かされても、いったん止まる。
+        </strong>
+
+      </div>
+
+      <p>
+        「今すぐ」「残り○秒」などと言われても、
+        まず落ち着いて確認することが大切です。
+      </p>
+
+    </div>
+
+
+    <button
+      id="to-final"
+      class="main-button"
+      type="button"
+    >
+      最終チャレンジへ
+    </button>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     STEP 6
+     最終シミュレーション
+========================================================= -->
+
+<section
+  id="screen-final"
+  class="screen hidden"
+>
+
+  <div class="final-page">
+
+    <div class="quiz-label">
+      STEP 3 / FINAL
+    </div>
+
+
+    <h1>
+      最後の判断
+    </h1>
+
+
+    <p class="final-lead">
+      次のようなメッセージが届いたら、
+      あなたならどうしますか？
+    </p>
+
+
+    <div class="message-card">
+
+      <div class="message-title">
+        セキュリティに関する重要なお知らせ
+      </div>
+
+
+      <p>
+        お客様のアカウントに、
+        通常とは異なるアクセスが
+        確認されました。
+      </p>
+
+
+      <p>
+        本日中に確認を行わない場合、
+        一部機能が制限される可能性があります。
+      </p>
+
+
+      <div class="message-link">
+        アカウントを確認する
+      </div>
+
+    </div>
+
+
+    <h2>
+      あなたならどうする？
+    </h2>
+
+
+    <div class="final-options">
+
+
+      <button
+        class="final-option"
+        data-answer="bad"
+        type="button"
+      >
+        メッセージのリンクを
+        すぐに開く
+      </button>
+
+
+      <button
+        class="final-option"
+        data-answer="bad"
+        type="button"
+      >
+        メッセージに返信して確認する
+      </button>
+
+
+      <button
+        class="final-option"
+        data-answer="good"
+        type="button"
+      >
+        自分で公式サイトや
+        公式アプリを開いて確認する
+      </button>
+
+
+    </div>
+
+
+    <div
+      id="final-result"
+      class="final-result hidden"
+    >
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     STEP 7
+     エンディング
+========================================================= -->
+
+<section
+  id="screen-end"
+  class="screen hidden"
+>
+
+  <div class="end-page">
+
+    <div class="complete">
+      COMPLETE
+    </div>
+
+
+    <h1>
+      おつかれさまでした。
+    </h1>
+
+
+    <p>
+      フィッシング詐欺を見抜くときに
+      大切なのは、まず「慌てないこと」です。
+    </p>
+
+
+    <div class="end-grid">
+
+
+      <div>
+
+        <strong>
+          焦らない
+        </strong>
+
+        <p>
+          「今すぐ」「残り○分」などで
+          急かされても、まず落ち着く。
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <strong>
+          確認する
+        </strong>
+
+        <p>
+          送信元やURLなどを確認する。
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <strong>
+          自分でアクセスする
+        </strong>
+
+        <p>
+          公式サイトや公式アプリから
+          確認する。
+        </p>
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- ===================================================
+         コード解説
+    =================================================== -->
+
+    <div class="code-learning">
+
+      <h2>
+        このサイトはどうやって動いていた？
+      </h2>
+
+
+      <div class="learning-item">
+
+        <div class="learning-label">
+          HTML
+        </div>
+
+        <h3>
+          「何を置くか」
+        </h3>
+
+        <p>
+          HTMLでは、見出し・文章・ボタンなど、
+          ページの中身を作っています。
+        </p>
+
+
+        <code>
+          &lt;button&gt;無料診断を開始&lt;/button&gt;
+        </code>
+
+
+        <p>
+          これは「無料診断を開始」という
+          ボタンを作るコードです。
+        </p>
+
+      </div>
+
+
+      <div class="learning-item">
+
+        <div class="learning-label">
+          CSS
+        </div>
+
+        <h3>
+          「どう見せるか」
+        </h3>
+
+        <p>
+          CSSでは、色・大きさ・位置・余白などを決めます。
+        </p>
+
+
+        <code>
+          .hidden { display: none; }
+        </code>
+
+
+        <p>
+          このサイトでは、
+          表示する画面を切り替えるために使っています。
+        </p>
+
+      </div>
+
+
+      <div class="learning-item">
+
+        <div class="learning-label">
+          JavaScript
+        </div>
+
+        <h3>
+          「何をしたらどうなるか」
+        </h3>
+
+        <p>
+          JavaScriptでは、
+          クリックしたときの動作などを作っています。
+        </p>
+
+
+        <code>
+          ad.addEventListener("click", function() { ... });
+        </code>
+
+
+        <p>
+          これは、
+          「広告がクリックされたら処理を行う」
+          という意味です。
+        </p>
+
+      </div>
+
+
+      <div class="learning-item">
+
+        <div class="learning-label">
+          タイマー
+        </div>
+
+        <h3>
+          カウントダウンはどう動いていた？
+        </h3>
+
+        <p>
+          JavaScriptで時間を管理し、
+          1秒ごとに残り時間を1つずつ減らしています。
+        </p>
+
+
+        <code>
+          setInterval(function() {
+          seconds--;
+          }, 1000);
+        </code>
+
+      </div>
+
+
+      <div class="learning-item">
+
+        <div class="learning-label">
+          画面切り替え
+        </div>
+
+        <h3>
+          このサイトの中心部分
+        </h3>
+
+        <p>
+          画面を全部一度隠して、
+          必要な画面だけ表示しています。
+        </p>
+
+
+        <div class="flow">
+
+          <span>
+            広告をクリック
+          </span>
+
+          <b>↓</b>
+
+          <span>
+            現在の画面を隠す
+          </span>
+
+          <b>↓</b>
+
+          <span>
+            次の画面を表示
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- ===================================================
+         自由研究まとめ
+    =================================================== -->
+
+    <div class="research-note">
+
+      <h2>
+        自由研究のまとめ
+      </h2>
+
+
+      <p>
+        この作品では、
+        「なぜ人は危険な広告をクリックしてしまうのか」
+        ということを体験できるようにしました。
+      </p>
+
+
+      <p>
+        最初は普通のポータルサイトに見える画面から始まり、
+        興味を引く広告、不安をあおる表示、
+        カウントダウン、本人確認という流れを
+        模擬的に体験できるようにしています。
+      </p>
+
+
+      <p>
+        その後、解説・クイズ・最終シミュレーションを通して、
+        急かされても落ち着いて確認することの重要性を
+        学べる構成にしました。
+      </p>
+
+
+    </div>
+
+
+
+    <!-- ===================================================
+         参考・出典
+    =================================================== -->
+
+    <div class="sources">
+
+      <h2>
+        参考・出典
+      </h2>
+
+
+      <p>
+
+        <strong>
+          CodePen
+        </strong>
+
+        <br>
+
+        Webページの作成・実験環境として使用しました。
+
+        <br>
+
+        <a
+          href="https://codepen.io/pen/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://codepen.io/pen/
+        </a>
+
+      </p>
+
+
+      <p>
+
+        <strong>
+          ラムダ技術部
+        </strong>
+
+        <br>
+
+        Web制作・技術系コンテンツの構成や
+        表現の参考にしました。
+
+        <br>
+
+        <a
+          href="https://xn--6ck3c0a.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://xn--6ck3c0a.com/
+        </a>
+
+      </p>
+
+
+      <p class="source-note">
+
+        ※この作品は自由研究・学習目的の模擬サイトです。
+
+        <br>
+
+        ※実在する企業・サービス・
+        セキュリティシステムとは関係ありません。
+
+        <br>
+
+        ※入力内容を保存・送信する機能はありません。
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- JavaScriptを読み込む -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
