@@ -49,16 +49,16 @@ document.addEventListener(
 
     /* =====================================================
        STEP 1
-       広告クリック
+       求人広告クリック
     ===================================================== */
 
-    const ad =
+    const jobAd =
       document.getElementById(
-        "security-ad"
+        "job-ad"
       );
 
 
-    ad.addEventListener(
+    jobAd.addEventListener(
       "click",
       function () {
 
@@ -72,11 +72,7 @@ document.addEventListener(
     );
 
 
-    /*
-       キーボードでも広告を押せる
-    */
-
-    ad.addEventListener(
+    jobAd.addEventListener(
       "keydown",
       function (event) {
 
@@ -123,13 +119,13 @@ document.addEventListener(
 
       const messages = [
 
-        "環境を確認しています…",
+        "条件を確認しています…",
 
-        "ブラウザを確認しています…",
+        "勤務条件を確認しています…",
 
-        "接続状態を確認しています…",
+        "報酬条件を確認しています…",
 
-        "セキュリティ状態を確認しています…",
+        "一致する求人を探しています…",
 
         "最終確認中…"
 
@@ -176,7 +172,7 @@ document.addEventListener(
                     "screen-scan"
                   );
 
-                  startScan();
+                  startJobScan();
 
                 },
                 500
@@ -193,30 +189,30 @@ document.addEventListener(
 
 
     /* =====================================================
-       スキャン
+       求人スキャン
     ===================================================== */
 
-    function startScan() {
+    function startJobScan() {
 
-      const danger =
+      const status =
         document.getElementById(
-          "scan-danger"
+          "job-danger"
         );
 
 
       const message =
         document.getElementById(
-          "danger-message"
+          "job-message"
         );
 
 
       const button =
         document.getElementById(
-          "detail-button"
+          "job-detail-button"
         );
 
 
-      danger.textContent =
+      status.textContent =
         "確認しています…";
 
 
@@ -233,12 +229,12 @@ document.addEventListener(
       setTimeout(
         function () {
 
-          danger.textContent =
-            "要確認";
+          status.textContent =
+            "一致";
 
 
-          danger.style.color =
-            "#c93232";
+          status.style.color =
+            "#b66a16";
 
 
           message.classList.remove(
@@ -259,16 +255,16 @@ document.addEventListener(
 
 
     /* =====================================================
-       詳細ボタン
+       詳細を見る
     ===================================================== */
 
-    const detailButton =
+    const jobDetailButton =
       document.getElementById(
-        "detail-button"
+        "job-detail-button"
       );
 
 
-    detailButton.addEventListener(
+    jobDetailButton.addEventListener(
       "click",
       function () {
 
@@ -300,7 +296,7 @@ document.addEventListener(
 
       const panel =
         document.querySelector(
-          ".alert-panel"
+          ".offer-panel"
         );
 
 
@@ -378,16 +374,16 @@ document.addEventListener(
 
 
     /* =====================================================
-       本人確認ボタン
+       本人確認直前
     ===================================================== */
 
-    const finalButton =
+    const finalWarningButton =
       document.getElementById(
         "final-warning-button"
       );
 
 
-    finalButton.addEventListener(
+    finalWarningButton.addEventListener(
       "click",
       function () {
 
@@ -414,83 +410,27 @@ document.addEventListener(
       {
 
         question:
-          "広告で「今すぐ」「無料」「30秒」などを強く出していた理由として、最も注意すべきものは？",
+          "「日給10万円」という表示を見るとき、まず何を確認するべき？",
 
         options: [
 
-          "利用者を急がせて、その場で操作させようとするため",
+          "報酬だけでなく、求人元や仕事内容も確認する",
 
-          "ページを軽くするため",
+          "金額が大きいので安全だと判断する",
 
-          "文字を読みやすくするため",
-
-          "検索結果を増やすため"
-
-        ],
-
-        correct: 0,
-
-        explanation:
-          "急がせる表現は、落ち着いて確認する時間を減らしてしまう可能性があります。",
-
-        memory:
-          "急かされても、いったん止まる。"
-
-      },
-
-
-      {
-
-        question:
-          "不安を感じるセキュリティ通知が届いたとき、適切な行動は？",
-
-        options: [
-
-          "通知内のリンクをすぐに開く",
-
-          "メッセージにパスワードを返信する",
-
-          "公式サイトや公式アプリから自分で確認する",
+          "すぐ応募する",
 
           "友達にパスワードを聞く"
 
         ],
 
-        correct: 2,
-
-        explanation:
-          "通知内のリンクをそのまま使わず、自分で公式の方法から確認するのが安全です。",
-
-        memory:
-          "公式サイトや公式アプリから確認する。"
-
-      },
-
-
-      {
-
-        question:
-          "今回の模擬サイトで特に注意すべきだった組み合わせは？",
-
-        options: [
-
-          "無料＋限定＋急がせる表現",
-
-          "白い背景＋青い文字",
-
-          "見出し＋本文",
-
-          "ニュース＋広告"
-
-        ],
-
         correct: 0,
 
         explanation:
-          "強いメリットと緊急性を組み合わせることで、すぐに操作したくなる状況を作っていました。",
+          "高額な報酬だけで判断せず、求人元や仕事内容などを確認することが重要です。",
 
         memory:
-          "「無料」や「限定」だけで安全とは判断しない。"
+          "高額報酬より、まず確認。"
 
       },
 
@@ -498,27 +438,27 @@ document.addEventListener(
       {
 
         question:
-          "大きなカウントダウンを表示した主な目的として最も適切なのは？",
+          "「残り3名」「今すぐ」などの表示で注意すべきことは？",
 
         options: [
 
-          "時計を正確に合わせるため",
+          "急いで応募する",
 
-          "焦りを感じさせ、すぐ操作させるため",
+          "焦らせるために使われる可能性がある",
 
-          "通信速度を測るため",
+          "必ず本物の求人だと考える",
 
-          "日付を表示するため"
+          "広告では絶対に使われない"
 
         ],
 
         correct: 1,
 
         explanation:
-          "時間制限を強く見せることで、冷静に確認する前に行動してしまう可能性があります。",
+          "人数や時間を強調することで、落ち着いて確認する前に行動させようとする場合があります。",
 
         memory:
-          "「残り○秒」と言われても、焦らない。"
+          "「残りわずか」でも、いったん止まる。"
 
       },
 
@@ -526,27 +466,83 @@ document.addEventListener(
       {
 
         question:
-          "今回の体験で最も大切な考え方はどれ？",
+          "「未経験OK」「面接なし」などを強く見せる理由として注意すべきことは？",
 
         options: [
 
-          "見た目が本物っぽければ信用する",
+          "応募のハードルを低く感じさせる可能性がある",
 
-          "ボタンが大きければ信用する",
+          "必ず安全な会社だと分かる",
 
-          "焦らず情報源を確認する",
+          "法律で安全性が保証される",
 
-          "無料なら必ず利用する"
+          "報酬額が自動的に確認される"
+
+        ],
+
+        correct: 0,
+
+        explanation:
+          "応募しやすそうに感じさせる表示だけでは、求人の信頼性までは確認できません。",
+
+        memory:
+          "簡単そうに見えても、求人元を確認する。"
+
+      },
+
+
+      {
+
+        question:
+          "SNSで高収入求人を見つけたとき、特に大切なのは？",
+
+        options: [
+
+          "投稿の金額だけを見る",
+
+          "急いで応募する",
+
+          "求人元や仕事内容を別の方法でも確認する",
+
+          "個人情報を先に送る"
 
         ],
 
         correct: 2,
 
         explanation:
-          "見た目や緊急性に流されず、送信元や公式情報を確認することが重要です。",
+          "投稿だけを信用せず、求人元や仕事内容を別の方法でも確認することが大切です。",
 
         memory:
-          "迷ったら、まず落ち着いて情報源を確認する。"
+          "別の方法でも情報源を確認する。"
+
+      },
+
+
+      {
+
+        question:
+          "今回の体験で一番大切な考え方はどれ？",
+
+        options: [
+
+          "高収入なら安全",
+
+          "急かされたらすぐ行動する",
+
+          "見た目が本物なら信用する",
+
+          "急かされても、まず確認する"
+
+        ],
+
+        correct: 3,
+
+        explanation:
+          "高額報酬や緊急性に流されず、まず情報源を確認することが重要です。",
+
+        memory:
+          "迷ったら、まず止まって確認する。"
 
       }
 
@@ -603,7 +599,7 @@ document.addEventListener(
 
 
     /* =====================================================
-       正解時の達成演出
+       正解演出
     ===================================================== */
 
     function showReward(
@@ -633,23 +629,15 @@ document.addEventListener(
       popup.innerHTML =
 
         "<div class='reward-main'>" +
-
         "✓ 正解！" +
-
         "</div>" +
-
 
         "<div class='reward-point'>" +
-
         "+1 POINT" +
-
         "</div>" +
 
-
         "<div class='reward-message'>" +
-
         memoryText +
-
         "</div>";
 
 
@@ -742,7 +730,7 @@ document.addEventListener(
 
       data.options.forEach(
         function (
-          text,
+          option,
           index
         ) {
 
@@ -765,7 +753,7 @@ document.addEventListener(
               65 + index
             ) +
             "　" +
-            text;
+            option;
 
 
           button.addEventListener(
@@ -908,7 +896,19 @@ document.addEventListener(
           quizData.length
         ) {
 
-          showQuizClear();
+          const finalScore =
+            document.getElementById(
+              "final-score"
+            );
+
+
+          finalScore.textContent =
+            score;
+
+
+          showScreen(
+            "screen-clear"
+          );
 
         } else {
 
@@ -918,30 +918,6 @@ document.addEventListener(
 
       }
     );
-
-
-
-    /* =====================================================
-       全問クリア
-    ===================================================== */
-
-    function showQuizClear() {
-
-      const finalScore =
-        document.getElementById(
-          "final-score"
-        );
-
-
-      finalScore.textContent =
-        score;
-
-
-      showScreen(
-        "screen-clear"
-      );
-
-    }
 
 
 
@@ -972,7 +948,7 @@ document.addEventListener(
 
 
     /* =====================================================
-       クイズ → 最終チャレンジ
+       クイズ → 最終
     ===================================================== */
 
     const toFinal =
@@ -1038,10 +1014,8 @@ document.addEventListener(
 
                 "<br><br>" +
 
-                "メッセージ内のリンクを" +
-                "そのまま使うのではなく、" +
-                "自分で公式サイトや公式アプリを開いて" +
-                "確認する方法があります。" +
+                "高収入という条件だけで判断せず、" +
+                "求人元や仕事内容を別の方法でも確認することが大切です。" +
 
                 "<br><br>" +
 
@@ -1078,10 +1052,8 @@ document.addEventListener(
 
                 "<br><br>" +
 
-                "不安をあおるメッセージほど、" +
-                "中のリンクをすぐ使わず、" +
-                "公式サイトや公式アプリから" +
-                "確認することが大切です。";
+                "高額報酬や「今すぐ」などで急かされても、" +
+                "まず求人元や仕事内容を確認しましょう。";
 
             }
 
