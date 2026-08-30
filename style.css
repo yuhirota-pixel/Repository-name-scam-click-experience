@@ -29,10 +29,11 @@ body {
 
 
 /* =========================================================
-   ポータルサイト
+   ポータル
 ========================================================= */
 
 .portal-header {
+
   height: 62px;
 
   background: #fff;
@@ -46,31 +47,40 @@ body {
   padding: 0 5%;
 
   gap: 30px;
+
 }
 
 .portal-logo {
+
   font-size: 25px;
 
   font-weight: 800;
 
   color: #333;
+
 }
 
 .weather {
+
   color: #666;
 
   font-size: 13px;
+
 }
 
 .header-links {
+
   margin-left: auto;
 
   color: #666;
 
   font-size: 13px;
+
 }
 
+
 .portal-search {
+
   background: white;
 
   display: flex;
@@ -80,38 +90,50 @@ body {
   gap: 35px;
 
   padding: 25px 6%;
+
 }
 
+
 .search-logo {
+
   font-size: 28px;
 
   font-weight: 800;
 
-  color: #263b85;
+  color: #315ea8;
+
 }
 
+
 .search-box {
+
   display: flex;
 
   width: min(650px, 100%);
+
 }
 
+
 .search-box input {
+
   flex: 1;
 
-  border: 2px solid #2c55a2;
+  border: 2px solid #4b7fbe;
 
   border-right: none;
 
   padding: 13px;
 
   font-size: 16px;
+
 }
 
+
 .search-box button {
+
   border: none;
 
-  background: #2c55a2;
+  background: #3970b9;
 
   color: white;
 
@@ -119,10 +141,11 @@ body {
 
   font-weight: 700;
 
-  cursor: pointer;
 }
 
+
 .category-bar {
+
   display: flex;
 
   gap: 30px;
@@ -140,9 +163,12 @@ body {
   color: #444;
 
   overflow-x: auto;
+
 }
 
+
 .portal-main {
+
   width: min(1180px, 92%);
 
   margin: 30px auto;
@@ -152,37 +178,49 @@ body {
   grid-template-columns: 1fr 320px;
 
   gap: 30px;
+
 }
 
+
 .news-area {
+
   background: white;
 
   border-radius: 8px;
 
   padding: 25px;
+
 }
 
+
 .section-title {
+
   font-size: 18px;
 
   font-weight: 800;
 
-  border-left: 5px solid #2c55a2;
+  border-left: 5px solid #3970b9;
 
   padding-left: 10px;
 
   margin-bottom: 20px;
+
 }
 
+
 .news-main {
+
   display: grid;
 
   grid-template-columns: 250px 1fr;
 
   gap: 20px;
+
 }
 
+
 .news-photo {
+
   height: 160px;
 
   background:
@@ -201,43 +239,61 @@ body {
   font-size: 35px;
 
   color: #31518d;
+
 }
 
+
 .news-tag {
+
   font-size: 11px;
 
   color: #c33;
 
   font-weight: 800;
+
 }
 
+
 .news-main h1 {
+
   font-size: 25px;
 
   line-height: 1.45;
 
   margin: 8px 0;
+
 }
 
+
 .news-main p {
+
   color: #666;
 
   line-height: 1.7;
+
 }
 
+
 .news-list {
+
   margin-top: 25px;
 
   border-top: 1px solid #eee;
+
 }
 
+
 .news-list div {
+
   padding: 14px 0;
 
   border-bottom: 1px solid #eee;
+
 }
 
+
 .news-list span {
+
   color: #d33;
 
   font-size: 11px;
@@ -245,9 +301,12 @@ body {
   font-weight: 800;
 
   margin-right: 10px;
+
 }
 
+
 .side-heading {
+
   font-size: 13px;
 
   font-weight: 800;
@@ -255,99 +314,140 @@ body {
   margin-bottom: 12px;
 
   color: #555;
+
 }
 
 
 /* =========================================================
-   広告
+   求人広告
 ========================================================= */
 
-.security-ad {
+.job-ad {
+
   background:
     linear-gradient(
       135deg,
-      #0d2f62,
-      #1f62bf
+      #155c3b,
+      #1f8a59
     );
 
   color: white;
 
-  border-radius: 10px;
+  border-radius: 12px;
 
   padding: 25px;
 
   cursor: pointer;
 
   box-shadow:
-    0 10px 30px rgba(0,0,0,.2);
+    0 12px 30px rgba(26,100,70,.25);
 
   transition:
     transform .2s,
     box-shadow .2s;
+
 }
 
-.security-ad:hover {
+
+.job-ad:hover {
+
   transform: translateY(-3px);
 
   box-shadow:
-    0 16px 38px rgba(0,0,0,.25);
+    0 18px 40px rgba(26,100,70,.32);
+
 }
 
-.ad-company {
-  font-size: 22px;
 
-  font-weight: 800;
+.job-ad-small {
+
+  font-size: 10px;
+
+  opacity: .8;
+
 }
 
-.ad-small {
-  font-size: 9px;
 
-  opacity: .6;
+.job-ad-money {
 
-  margin-top: 3px;
+  margin-top: 8px;
+
+  font-size: 18px;
+
 }
 
-.security-ad h2 {
-  font-size: 25px;
+
+.job-ad-money strong {
+
+  display: block;
+
+  font-size: 42px;
+
+  line-height: 1;
+
+  color: #ffe66d;
+
+  margin-top: 5px;
+
+}
+
+
+.job-ad h2 {
+
+  font-size: 23px;
 
   line-height: 1.4;
 
-  margin: 25px 0 12px;
+  margin: 17px 0;
+
 }
 
-.security-ad p {
-  font-size: 14px;
 
-  opacity: .92;
+.job-ad-points {
+
+  display: grid;
+
+  gap: 6px;
+
+  font-size: 13px;
+
 }
 
-.ad-button {
-  margin-top: 22px;
+
+.job-ad-button {
+
+  margin-top: 20px;
+
+  padding: 13px;
 
   background: white;
 
-  color: #1554a5;
+  color: #16623f;
 
   border-radius: 7px;
 
   text-align: center;
 
-  padding: 13px;
+  font-weight: 900;
 
-  font-weight: 800;
 }
 
-.ad-footer {
-  text-align: center;
 
-  font-size: 10px;
+.job-ad-tiny {
 
-  margin-top: 10px;
+  text-align: right;
 
-  opacity: .6;
+  font-size: 8px;
+
+  margin-top: 9px;
+
+  opacity: .5;
+
 }
+
 
 .small-story {
+
   background: white;
 
   padding: 15px;
@@ -357,9 +457,12 @@ body {
   border-bottom: 1px solid #eee;
 
   font-size: 14px;
+
 }
 
+
 .portal-footer {
+
   text-align: center;
 
   color: #999;
@@ -367,7 +470,9 @@ body {
   font-size: 11px;
 
   padding: 30px;
+
 }
+
 
 
 /* =========================================================
@@ -375,13 +480,14 @@ body {
 ========================================================= */
 
 .loading-screen {
+
   min-height: 100vh;
 
   background:
     linear-gradient(
       145deg,
-      #071428,
-      #102b55
+      #123b69,
+      #2b6faf
     );
 
   color: white;
@@ -395,23 +501,32 @@ body {
   align-items: center;
 
   padding: 30px;
+
 }
 
+
 .loading-logo {
+
   font-size: 34px;
 
   font-weight: 800;
 
   margin-bottom: 35px;
+
 }
 
+
 .loading-title {
+
   font-size: 20px;
 
   margin-bottom: 30px;
+
 }
 
+
 .progress-area {
+
   width: min(500px, 90%);
 
   height: 8px;
@@ -421,24 +536,31 @@ body {
   border-radius: 10px;
 
   overflow: hidden;
+
 }
 
+
 #progress-bar {
+
   width: 0%;
 
   height: 100%;
 
-  background: #61a8ff;
+  background: #8fd2ff;
 
   transition: width .15s;
+
 }
 
+
 #loading-text {
+
   margin-top: 15px;
 
-  color: #b7c8df;
+  color: #d7ebff;
 
   font-size: 13px;
+
 }
 
 
@@ -447,15 +569,19 @@ body {
 ========================================================= */
 
 .scan-page {
+
   min-height: 100vh;
 
   background: #f5f7fa;
+
 }
 
+
 .scan-header {
+
   height: 70px;
 
-  background: #fff;
+  background: white;
 
   border-bottom: 1px solid #ddd;
 
@@ -466,21 +592,30 @@ body {
   justify-content: space-between;
 
   padding: 0 6%;
+
 }
 
+
 .scan-logo {
+
   font-size: 24px;
 
   font-weight: 800;
+
 }
 
+
 .scan-secure {
+
   color: #378d5d;
 
   font-size: 11px;
+
 }
 
+
 .scan-body {
+
   width: min(700px, 92%);
 
   margin: 80px auto;
@@ -493,25 +628,37 @@ body {
 
   box-shadow:
     0 10px 35px rgba(0,0,0,.08);
+
 }
 
+
 .scan-status {
+
   color: #2d63ae;
 
   font-size: 12px;
 
   font-weight: 800;
+
 }
+
 
 .scan-body h1 {
+
   font-size: 31px;
+
 }
+
 
 .scan-body p {
+
   color: #666;
+
 }
 
+
 .check-row {
+
   display: flex;
 
   justify-content: space-between;
@@ -519,37 +666,52 @@ body {
   padding: 18px 0;
 
   border-bottom: 1px solid #eee;
+
 }
+
 
 .green {
+
   color: #258051;
+
 }
 
-#scan-danger {
+
+#job-danger {
+
   color: #777;
+
 }
+
 
 .danger-message {
+
   margin-top: 25px;
 
-  background: #fff4f4;
+  background: #fff7ec;
 
-  border: 1px solid #e9b4b4;
+  border: 1px solid #e9c58e;
 
   padding: 20px;
 
   border-radius: 8px;
 
-  color: #852525;
+  color: #805018;
+
 }
 
+
 .danger-title {
+
   font-weight: 800;
 
   margin-bottom: 7px;
+
 }
 
+
 .danger-button {
+
   margin-top: 20px;
 
   width: 100%;
@@ -558,7 +720,7 @@ body {
 
   border: none;
 
-  background: #c93232;
+  background: #b66a16;
 
   color: white;
 
@@ -569,102 +731,133 @@ body {
   font-weight: 800;
 
   cursor: pointer;
+
 }
 
 
 /* =========================================================
-   警告画面
+   高収入案件画面
 ========================================================= */
 
-.alert-page {
+.offer-page {
+
   min-height: 100vh;
 
-  background: #eeeeee;
+  background:
+    linear-gradient(
+      180deg,
+      #f7f8fa,
+      #eceff3
+    );
+
 }
 
-.alert-top {
-  padding: 20px 5%;
 
-  background: #181818;
+.offer-top {
+
+  background: #215f9d;
 
   color: white;
 
+  padding: 20px 5%;
+
   font-weight: 800;
+
 }
 
-.alert-panel {
-  width: min(650px, 92%);
 
-  margin: 45px auto;
+.offer-panel {
+
+  width: min(680px, 92%);
+
+  margin: 40px auto;
 
   background: white;
 
+  border-radius: 14px;
+
   padding: 35px;
 
-  border-radius: 8px;
-
   box-shadow:
-    0 10px 35px rgba(0,0,0,.18);
+    0 12px 40px rgba(0,0,0,.12);
+
 }
 
-.alert-icon {
-  width: 55px;
 
-  height: 55px;
+.offer-badge {
 
-  border-radius: 50%;
+  display: inline-block;
 
-  display: flex;
+  background: #fff0d2;
 
-  align-items: center;
+  color: #a35d00;
 
-  justify-content: center;
+  padding: 7px 10px;
 
-  background: #bd2e2e;
-
-  color: white;
-
-  font-size: 30px;
-
-  font-weight: 800;
-}
-
-.alert-label {
-  color: #bd2e2e;
+  border-radius: 20px;
 
   font-size: 11px;
 
-  font-weight: 800;
+  font-weight: 900;
 
-  margin-top: 20px;
+  letter-spacing: 1px;
+
 }
 
-.alert-panel h1 {
-  font-size: 32px;
 
-  line-height: 1.45;
+.offer-title {
+
+  margin-top: 18px;
+
+  color: #666;
+
+  font-size: 16px;
+
 }
 
-.alert-important {
-  color: #8b2929;
 
-  font-weight: 800;
+.offer-panel h1 {
 
-  line-height: 1.8;
+  margin: 8px 0 0;
+
+  font-size: 40px;
+
 }
 
-.alert-warning {
+
+.offer-panel h1 strong {
+
+  color: #cb5a18;
+
+  font-size: 55px;
+
+}
+
+
+.offer-subtitle {
+
+  font-size: 16px;
+
   color: #555;
 
-  line-height: 1.8;
 }
 
 
-/* =========================================================
-   カウントダウン
-========================================================= */
+.offer-features {
+
+  display: grid;
+
+  gap: 8px;
+
+  margin-top: 18px;
+
+  color: #555;
+
+}
+
 
 .countdown-box {
+
   margin-top: 28px;
 
   padding: 22px;
@@ -673,127 +866,134 @@ body {
 
   border-radius: 10px;
 
-  background: #fff1f1;
+  background: #fff0ef;
 
-  border: 2px solid #d63c3c;
+  border: 2px solid #d64949;
+
 }
+
 
 .countdown-title {
+
   font-size: 13px;
 
-  color: #8f1f1f;
+  color: #8e2a2a;
 
   font-weight: 800;
+
 }
 
+
 #countdown {
-  margin-top: 5px;
+
+  margin-top: 6px;
 
   font-family:
     "Courier New",
     monospace;
 
-  font-size: 56px;
+  font-size: 62px;
 
   line-height: 1;
 
   font-weight: 900;
 
-  color: #c90000;
+  color: #c50000;
 
-  letter-spacing: 3px;
+  letter-spacing: 4px;
+
 }
 
+
 .countdown-sub {
-  margin-top: 8px;
+
+  margin-top: 9px;
 
   font-size: 11px;
 
-  color: #8f5555;
+  color: #8e4e4e;
+
 }
 
-.alert-panel.urgent .countdown-box {
-  background: #ffe0e0;
 
-  border-color: #a90000;
+.remaining-box {
 
-  box-shadow:
-    0 0 25px rgba(200,0,0,.2);
-}
+  margin-top: 15px;
 
-.alert-panel.urgent #countdown {
-  color: #a90000;
-
-  transform: scale(1.05);
-}
-
-.alert-info {
-  border-top: 1px solid #ddd;
-
-  border-bottom: 1px solid #ddd;
-
-  margin-top: 25px;
-}
-
-.alert-info div {
-  display: flex;
-
-  justify-content: space-between;
-
-  padding: 13px 0;
-
-  border-bottom: 1px solid #eee;
-}
-
-.alert-info div:last-child {
-  border-bottom: none;
-}
-
-.alert-info span {
-  color: #777;
-}
-
-.alert-info strong {
-  color: #bd2e2e;
-}
-
-.fake-login {
-  margin-top: 30px;
-
-  border: 1px solid #ddd;
-
-  padding: 22px;
-
-  border-radius: 8px;
-}
-
-.fake-login-title {
-  font-weight: 800;
-
-  font-size: 18px;
-}
-
-.fake-login p {
-  color: #666;
-
-  line-height: 1.7;
-}
-
-.fake-input {
-  border: 1px solid #ccc;
+  text-align: center;
 
   padding: 14px;
 
+  background: #fff8df;
+
+  border-radius: 8px;
+
+  color: #745c18;
+
+}
+
+
+.remaining-box strong {
+
+  color: #bb5c00;
+
+  margin-left: 6px;
+
+  font-size: 20px;
+
+}
+
+
+.fake-application {
+
+  margin-top: 25px;
+
+  padding: 22px;
+
+  border: 1px solid #ddd;
+
+  border-radius: 10px;
+
+}
+
+
+.application-title {
+
+  font-size: 18px;
+
+  font-weight: 800;
+
+}
+
+
+.fake-application p {
+
+  color: #666;
+
+  line-height: 1.7;
+
+}
+
+
+.fake-input {
+
+  padding: 14px;
+
+  margin-top: 11px;
+
   color: #aaa;
 
-  margin-top: 12px;
+  border: 1px solid #ccc;
 
   border-radius: 6px;
 
   background: #fafafa;
+
 }
 
+
 #final-warning-button {
+
   width: 100%;
 
   margin-top: 15px;
@@ -802,27 +1002,31 @@ body {
 
   border: none;
 
-  border-radius: 6px;
-
-  background: #c72f2f;
+  background: #d04a2f;
 
   color: white;
+
+  border-radius: 7px;
 
   font-weight: 900;
 
   font-size: 16px;
 
   cursor: pointer;
+
 }
 
+
 .tiny-text {
+
+  margin-top: 18px;
+
   text-align: center;
 
-  color: #bbb;
+  color: #aaa;
 
   font-size: 9px;
 
-  margin-top: 20px;
 }
 
 
@@ -834,18 +1038,22 @@ body {
 .quiz-page,
 .final-page,
 .end-page {
+
   width: min(900px, 92%);
 
   margin: auto;
 
   padding: 75px 0;
+
 }
+
 
 .reveal-badge,
 .complete {
+
   display: inline-block;
 
-  background: #111827;
+  background: #2463c3;
 
   color: white;
 
@@ -856,40 +1064,58 @@ body {
   font-size: 11px;
 
   letter-spacing: 2px;
+
 }
+
 
 .reveal-page h1,
 .quiz-page h1,
 .final-page h1,
 .end-page h1 {
+
   font-size: 42px;
 
   margin: 20px 0 35px;
+
 }
 
+
 .reveal-main {
-  background: #111827;
 
-  color: white;
+  background: white;
 
-  padding: 35px;
+  border-left: 7px solid #2463c3;
+
+  padding: 30px;
 
   border-radius: 12px;
 
   line-height: 1.8;
+
+  box-shadow:
+    0 6px 25px rgba(0,0,0,.07);
+
 }
 
+
 .big-stop {
+
   font-size: 24px;
 
   line-height: 1.7;
+
 }
+
 
 .big-stop strong {
-  color: #ff7777;
+
+  color: #cf4d42;
+
 }
 
+
 .explain-grid {
+
   display: grid;
 
   grid-template-columns:
@@ -898,9 +1124,12 @@ body {
   gap: 15px;
 
   margin-top: 25px;
+
 }
 
+
 .explain-box {
+
   background: white;
 
   padding: 25px;
@@ -909,15 +1138,21 @@ body {
 
   box-shadow:
     0 5px 20px rgba(0,0,0,.07);
+
 }
 
+
 .explain-box p {
+
   color: #666;
 
   line-height: 1.7;
+
 }
 
+
 .main-button {
+
   margin-top: 30px;
 
   padding: 15px 28px;
@@ -934,15 +1169,6 @@ body {
 
   cursor: pointer;
 
-  transition:
-    transform .15s,
-    opacity .15s;
-}
-
-.main-button:hover {
-  transform: translateY(-2px);
-
-  opacity: .92;
 }
 
 
@@ -951,6 +1177,7 @@ body {
 ========================================================= */
 
 .quiz-label {
+
   color: #2463c3;
 
   font-weight: 800;
@@ -958,9 +1185,12 @@ body {
   font-size: 12px;
 
   letter-spacing: 1px;
+
 }
 
+
 .quiz-counter {
+
   display: flex;
 
   justify-content: space-between;
@@ -968,9 +1198,12 @@ body {
   margin-bottom: 15px;
 
   color: #666;
+
 }
 
+
 .quiz-card {
+
   background: white;
 
   padding: 35px;
@@ -979,13 +1212,19 @@ body {
 
   box-shadow:
     0 8px 30px rgba(0,0,0,.08);
+
 }
+
 
 .quiz-card h2 {
+
   line-height: 1.7;
+
 }
 
+
 .quiz-option {
+
   display: block;
 
   width: 100%;
@@ -1006,30 +1245,36 @@ body {
 
   font-size: 15px;
 
-  transition:
-    border-color .15s,
-    transform .15s;
 }
+
 
 .quiz-option:hover {
+
   border-color: #2463c3;
 
-  transform: translateY(-1px);
 }
 
+
 .quiz-option.correct {
+
   border-color: #2d914f;
 
   background: #f0fff4;
+
 }
 
+
 .quiz-option.wrong {
+
   border-color: #c83232;
 
   background: #fff2f2;
+
 }
 
+
 .quiz-result {
+
   margin-top: 20px;
 
   padding: 20px;
@@ -1039,14 +1284,16 @@ body {
   background: #eef5ff;
 
   line-height: 1.8;
+
 }
 
 
 /* =========================================================
-   正解時の達成演出
+   正解ポップアップ
 ========================================================= */
 
 .reward-overlay {
+
   position: fixed;
 
   inset: 0;
@@ -1056,13 +1303,11 @@ body {
 
   z-index: 9998;
 
-  opacity: 0;
-
-  animation:
-    rewardOverlayShow .25s ease forwards;
 }
 
+
 .reward-popup {
+
   position: fixed;
 
   left: 50%;
@@ -1090,21 +1335,30 @@ body {
 
   animation:
     rewardShow .8s ease forwards;
+
 }
+
 
 .reward-popup.correct-answer {
+
   border: 3px solid #36a269;
+
 }
 
+
 .reward-main {
+
   font-size: 30px;
 
   font-weight: 900;
 
   color: #1d8f4d;
+
 }
 
+
 .reward-point {
+
   margin-top: 8px;
 
   font-size: 18px;
@@ -1112,62 +1366,62 @@ body {
   font-weight: 800;
 
   color: #2463c3;
+
 }
 
+
 .reward-message {
+
   margin-top: 10px;
 
   color: #666;
 
   line-height: 1.6;
+
 }
+
 
 @keyframes rewardShow {
 
   0% {
+
     opacity: 0;
 
     transform:
       translate(-50%, -50%)
       scale(.7);
+
   }
 
   60% {
+
     opacity: 1;
 
     transform:
       translate(-50%, -50%)
       scale(1.08);
+
   }
 
   100% {
+
     opacity: 1;
 
     transform:
       translate(-50%, -50%)
       scale(1);
-  }
 
-}
-
-@keyframes rewardOverlayShow {
-
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
   }
 
 }
 
 
 /* =========================================================
-   全問クリア
+   クリア
 ========================================================= */
 
 .clear-page {
+
   min-height: 100vh;
 
   width: min(800px, 92%);
@@ -1177,12 +1431,15 @@ body {
   padding: 80px 0;
 
   text-align: center;
+
 }
 
+
 .clear-badge {
+
   display: inline-block;
 
-  background: #111827;
+  background: #2463c3;
 
   color: white;
 
@@ -1192,10 +1449,11 @@ body {
 
   font-size: 11px;
 
-  letter-spacing: 2px;
 }
 
+
 .clear-icon {
+
   width: 100px;
 
   height: 100px;
@@ -1218,17 +1476,20 @@ body {
 
   font-weight: 900;
 
-  animation:
-    clearPop .65s ease;
 }
 
+
 .clear-page h1 {
+
   font-size: 52px;
 
   margin: 0;
+
 }
 
+
 .clear-score {
+
   margin-top: 15px;
 
   font-size: 60px;
@@ -1236,21 +1497,30 @@ body {
   font-weight: 900;
 
   color: #2463c3;
+
 }
 
+
 .clear-score small {
+
   font-size: 25px;
 
   color: #888;
+
 }
 
+
 .clear-message {
+
   color: #666;
 
   font-size: 17px;
+
 }
 
+
 .memory-point {
+
   margin: 35px auto 0;
 
   max-width: 650px;
@@ -1265,68 +1535,63 @@ body {
     0 8px 30px rgba(0,0,0,.08);
 
   border-top: 5px solid #2463c3;
+
 }
 
+
 .memory-title {
+
   font-size: 13px;
 
   font-weight: 800;
 
   color: #666;
 
-  letter-spacing: 1px;
 }
 
+
 .memory-text {
+
   margin-top: 12px;
 
   font-size: 25px;
 
   line-height: 1.5;
+
 }
+
 
 .memory-text strong {
+
   color: #2463c3;
+
 }
 
+
 .memory-point p {
+
   color: #666;
 
   line-height: 1.8;
-}
-
-@keyframes clearPop {
-
-  0% {
-    opacity: 0;
-
-    transform: scale(.4);
-  }
-
-  70% {
-    opacity: 1;
-
-    transform: scale(1.15);
-  }
-
-  100% {
-    transform: scale(1);
-  }
 
 }
 
 
 /* =========================================================
-   最終シミュレーション
+   最終
 ========================================================= */
 
 .final-lead {
+
   color: #666;
 
   line-height: 1.8;
+
 }
 
+
 .message-card {
+
   background: white;
 
   padding: 30px;
@@ -1337,23 +1602,32 @@ body {
 
   box-shadow:
     0 8px 30px rgba(0,0,0,.08);
+
 }
 
+
 .message-title {
+
   font-weight: 800;
 
   font-size: 20px;
 
   margin-bottom: 20px;
+
 }
 
+
 .message-card p {
+
   color: #555;
 
   line-height: 1.8;
+
 }
 
+
 .message-link {
+
   display: inline-block;
 
   padding: 12px 20px;
@@ -1365,17 +1639,23 @@ body {
   border-radius: 6px;
 
   margin-top: 10px;
+
 }
 
+
 .final-options {
+
   display: grid;
 
   gap: 12px;
 
   margin-top: 15px;
+
 }
 
+
 .final-option {
+
   padding: 17px;
 
   background: white;
@@ -1389,10 +1669,22 @@ body {
   cursor: pointer;
 
   font-size: 15px;
+
 }
 
-.final-option:hover {
-  border-color: #2463c3;
+
+.final-result {
+
+  margin-top: 20px;
+
+  padding: 20px;
+
+  border-radius: 9px;
+
+  background: #eef5ff;
+
+  line-height: 1.8;
+
 }
 
 
@@ -1401,18 +1693,25 @@ body {
 ========================================================= */
 
 .end-page {
+
   text-align: center;
+
 }
 
+
 .end-page > p {
+
   font-size: 18px;
 
   color: #666;
 
   line-height: 1.8;
+
 }
 
+
 .end-grid {
+
   display: grid;
 
   grid-template-columns:
@@ -1421,9 +1720,12 @@ body {
   gap: 15px;
 
   margin-top: 35px;
+
 }
 
+
 .end-grid > div {
+
   background: white;
 
   text-align: left;
@@ -1431,20 +1733,25 @@ body {
   padding: 25px;
 
   border-radius: 10px;
+
 }
 
+
 .end-grid p {
+
   color: #666;
 
   line-height: 1.6;
+
 }
 
 
 /* =========================================================
-   コード学習
+   コード解説
 ========================================================= */
 
 .code-learning {
+
   margin-top: 45px;
 
   text-align: left;
@@ -1454,9 +1761,12 @@ body {
   padding: 30px;
 
   border-radius: 12px;
+
 }
 
+
 .learning-item {
+
   margin-top: 20px;
 
   background: white;
@@ -1464,9 +1774,12 @@ body {
   padding: 23px;
 
   border-radius: 9px;
+
 }
 
+
 .learning-label {
+
   display: inline-block;
 
   background: #1f2937;
@@ -1478,19 +1791,28 @@ body {
   font-size: 11px;
 
   border-radius: 5px;
+
 }
+
 
 .learning-item h3 {
+
   margin-bottom: 5px;
+
 }
 
+
 .learning-item p {
+
   color: #666;
 
   line-height: 1.8;
+
 }
 
+
 .learning-item code {
+
   display: block;
 
   margin: 15px 0;
@@ -1508,9 +1830,12 @@ body {
   font-family:
     "Courier New",
     monospace;
+
 }
 
+
 .flow {
+
   display: flex;
 
   align-items: center;
@@ -1522,9 +1847,12 @@ body {
   flex-wrap: wrap;
 
   margin-top: 20px;
+
 }
 
+
 .flow span {
+
   background: #eef5ff;
 
   padding: 12px 15px;
@@ -1532,10 +1860,14 @@ body {
   border-radius: 7px;
 
   font-size: 13px;
+
 }
 
+
 .flow b {
+
   color: #2463c3;
+
 }
 
 
@@ -1544,6 +1876,7 @@ body {
 ========================================================= */
 
 .research-note {
+
   margin-top: 30px;
 
   background: #eef5ff;
@@ -1555,6 +1888,7 @@ body {
   border-radius: 10px;
 
   line-height: 1.8;
+
 }
 
 
@@ -1563,6 +1897,7 @@ body {
 ========================================================= */
 
 .sources {
+
   margin-top: 30px;
 
   text-align: left;
@@ -1574,89 +1909,121 @@ body {
   border-radius: 10px;
 
   border: 1px solid #ddd;
+
 }
 
+
 .sources p {
+
   line-height: 1.8;
 
   color: #555;
+
 }
 
+
 .sources a {
+
   color: #2463c3;
 
   word-break: break-all;
+
 }
 
+
 .source-note {
+
   font-size: 12px;
 
   color: #888 !important;
+
 }
 
 
 /* =========================================================
-   スマートフォン
+   スマホ
 ========================================================= */
 
 @media (max-width: 800px) {
 
   .portal-header {
+
     padding: 0 15px;
+
   }
+
 
   .header-links {
+
     display: none;
+
   }
+
 
   .portal-search {
+
     display: block;
+
   }
+
 
   .search-logo {
+
     margin-bottom: 15px;
+
   }
+
 
   .portal-main {
+
     grid-template-columns: 1fr;
+
   }
+
 
   .news-main {
+
     grid-template-columns: 1fr;
+
   }
 
+
   .explain-grid {
+
     grid-template-columns: 1fr;
+
   }
+
 
   .reveal-page h1,
   .quiz-page h1,
   .final-page h1,
   .end-page h1 {
+
     font-size: 32px;
+
   }
 
-  .alert-panel,
+
+  .offer-panel,
   .scan-body {
+
     padding: 25px;
+
   }
+
 
   #countdown {
+
     font-size: 45px;
+
   }
+
 
   .clear-page h1 {
+
     font-size: 40px;
-  }
 
-  .clear-score {
-    font-size: 50px;
-  }
-
-  .reward-popup {
-    width: min(360px, 90%);
-
-    padding: 25px;
   }
 
 }
