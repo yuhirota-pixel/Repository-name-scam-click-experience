@@ -1,0 +1,2134 @@
+/* =========================================================
+   基本設定
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Arial,
+    "Noto Sans JP",
+    sans-serif;
+  background: #f1f4f8;
+  color: #222;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.screen {
+  min-height: 100vh;
+}
+
+
+/* =========================================================
+   STEP 1
+   ポータルサイト
+========================================================= */
+
+.portal-header {
+  height: 62px;
+  background: #ffffff;
+  border-bottom: 1px solid #dfe4ea;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 5%;
+  gap: 28px;
+}
+
+.portal-logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: #344f87;
+}
+
+.portal-nav {
+  display: flex;
+  gap: 22px;
+
+  color: #555;
+  font-size: 13px;
+}
+
+.portal-weather {
+  margin-left: auto;
+
+  color: #777;
+  font-size: 12px;
+}
+
+
+.portal-search {
+  background: #ffffff;
+
+  padding: 23px 6%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 35px;
+}
+
+.search-logo {
+  font-size: 27px;
+
+  color: #344f87;
+
+  font-weight: 800;
+}
+
+.search-box {
+  display: flex;
+
+  width: min(680px, 100%);
+}
+
+.search-box input {
+  flex: 1;
+
+  padding: 12px 15px;
+
+  border: 2px solid #5c7fba;
+
+  border-right: none;
+
+  outline: none;
+}
+
+.search-box button {
+  width: 90px;
+
+  border: none;
+
+  background: #426fae;
+
+  color: white;
+
+  font-weight: 800;
+}
+
+
+.portal-category {
+  display: flex;
+
+  gap: 25px;
+
+  padding: 13px 6%;
+
+  background: #ffffff;
+
+  border-top: 1px solid #eef0f2;
+
+  border-bottom: 1px solid #dfe4ea;
+
+  color: #555;
+
+  font-size: 13px;
+
+  overflow-x: auto;
+}
+
+
+.portal-main {
+  width: min(1180px, 92%);
+
+  margin: 30px auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    330px;
+
+  gap: 30px;
+}
+
+
+.portal-news {
+  background: white;
+
+  border-radius: 10px;
+
+  padding: 25px;
+}
+
+
+.portal-section-title {
+  font-size: 19px;
+
+  font-weight: 800;
+
+  padding-left: 12px;
+
+  border-left: 5px solid #4b73aa;
+
+  margin-bottom: 20px;
+}
+
+
+.hero-news {
+  display: grid;
+
+  grid-template-columns: 260px 1fr;
+
+  gap: 20px;
+}
+
+
+.hero-image {
+  height: 180px;
+
+  border-radius: 8px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e3ebf7,
+      #b7c9e4
+    );
+
+  color: #45638f;
+
+  font-size: 22px;
+
+  font-weight: 800;
+}
+
+
+.news-label {
+  color: #c94b45;
+
+  font-size: 11px;
+
+  font-weight: 900;
+}
+
+
+.hero-text h1 {
+  font-size: 26px;
+
+  line-height: 1.4;
+
+  margin: 7px 0 10px;
+}
+
+
+.hero-text p {
+  color: #666;
+
+  line-height: 1.8;
+}
+
+
+.article-meta {
+  font-size: 11px;
+
+  color: #999;
+
+  margin-top: 18px;
+}
+
+
+.news-lines {
+  margin-top: 25px;
+
+  border-top: 1px solid #e7eaee;
+}
+
+
+.news-lines div {
+  padding: 14px 0;
+
+  border-bottom: 1px solid #e7eaee;
+
+  color: #444;
+}
+
+
+.news-lines span {
+  color: #c94b45;
+
+  font-weight: 800;
+
+  font-size: 10px;
+
+  margin-right: 10px;
+}
+
+
+.side-title {
+  font-size: 12px;
+
+  color: #666;
+
+  font-weight: 800;
+
+  margin-bottom: 12px;
+}
+
+
+.side-gap {
+  margin-top: 25px;
+}
+
+
+/* =========================================================
+   求人広告
+========================================================= */
+
+.job-ad {
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      140deg,
+      #165d42,
+      #22935e
+    );
+
+  color: white;
+
+  padding: 25px;
+
+  border-radius: 13px;
+
+  box-shadow:
+    0 14px 35px rgba(25,102,69,.25);
+
+  transition:
+    transform .2s,
+    box-shadow .2s;
+}
+
+
+.job-ad::before {
+  content: "";
+
+  position: absolute;
+
+  width: 130px;
+  height: 130px;
+
+  top: -55px;
+  right: -40px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255,255,255,.08);
+}
+
+
+.job-ad:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 20px 42px rgba(25,102,69,.30);
+}
+
+
+.ad-topline {
+  font-size: 10px;
+
+  opacity: .82;
+}
+
+
+.ad-salary-title {
+  margin-top: 18px;
+
+  font-size: 15px;
+}
+
+
+.ad-salary {
+  font-size: 46px;
+
+  line-height: 1;
+
+  color: #ffe874;
+
+  font-weight: 900;
+
+  margin-top: 4px;
+}
+
+
+.ad-salary span {
+  font-size: 18px;
+
+  margin-left: 3px;
+}
+
+
+.ad-copy {
+  font-size: 20px;
+
+  font-weight: 800;
+
+  margin-top: 16px;
+}
+
+
+.ad-points {
+  display: grid;
+
+  gap: 7px;
+
+  margin-top: 15px;
+
+  font-size: 13px;
+}
+
+
+.ad-action {
+  margin-top: 20px;
+
+  background: white;
+
+  color: #1a6744;
+
+  text-align: center;
+
+  padding: 13px;
+
+  border-radius: 8px;
+
+  font-weight: 900;
+}
+
+
+.ad-note {
+  margin-top: 9px;
+
+  text-align: right;
+
+  font-size: 8px;
+
+  opacity: .52;
+}
+
+
+.ranking-item {
+  background: white;
+
+  padding: 15px;
+
+  border-bottom: 1px solid #e7eaee;
+
+  font-size: 13px;
+
+  color: #555;
+}
+
+
+.portal-footer {
+  text-align: center;
+
+  color: #999;
+
+  font-size: 10px;
+
+  padding: 30px;
+}
+
+
+/* =========================================================
+   求人詳細
+========================================================= */
+
+.job-page {
+  min-height: 100vh;
+
+  background: #f5f7fa;
+}
+
+
+.job-header {
+  height: 68px;
+
+  background: white;
+
+  border-bottom: 1px solid #ddd;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 6%;
+}
+
+
+.job-brand {
+  font-weight: 900;
+
+  font-size: 24px;
+
+  color: #315e9d;
+}
+
+
+.job-header-right {
+  color: #777;
+
+  font-size: 12px;
+}
+
+
+.job-detail {
+  width: min(720px, 92%);
+
+  margin: 45px auto;
+}
+
+
+.job-breadcrumb {
+  color: #8a929e;
+
+  font-size: 11px;
+
+  margin-bottom: 14px;
+}
+
+
+.job-card {
+  background: white;
+
+  padding: 32px;
+
+  border-radius: 13px;
+
+  box-shadow:
+    0 8px 30px rgba(0,0,0,.07);
+}
+
+
+.job-card-top {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+
+.job-badge {
+  background: #e9f3ff;
+
+  color: #2f66aa;
+
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+
+  font-weight: 900;
+}
+
+
+.job-date {
+  font-size: 11px;
+
+  color: #999;
+}
+
+
+.job-card h1 {
+  font-size: 31px;
+
+  line-height: 1.4;
+
+  margin: 22px 0 10px;
+}
+
+
+.job-salary-big {
+  font-size: 19px;
+
+  color: #444;
+}
+
+
+.job-salary-big strong {
+  font-size: 44px;
+
+  color: #cd5c1c;
+}
+
+
+.job-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 18px;
+}
+
+
+.job-tags span {
+  background: #f0f4f7;
+
+  color: #59636d;
+
+  padding: 7px 10px;
+
+  border-radius: 6px;
+
+  font-size: 11px;
+}
+
+
+.job-info-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 10px;
+
+  margin-top: 25px;
+}
+
+
+.job-info-grid > div {
+  background: #f8fafc;
+
+  padding: 15px;
+
+  border-radius: 7px;
+}
+
+
+.job-info-grid small {
+  display: block;
+
+  color: #999;
+
+  font-size: 10px;
+
+  margin-bottom: 6px;
+}
+
+
+.job-info-grid strong {
+  font-size: 13px;
+}
+
+
+.job-description {
+  margin-top: 28px;
+
+  border-top: 1px solid #e7eaee;
+
+  padding-top: 23px;
+}
+
+
+.job-description h2 {
+  font-size: 18px;
+}
+
+
+.job-description p {
+  color: #666;
+
+  line-height: 1.8;
+}
+
+
+.job-attention {
+  margin-top: 25px;
+
+  padding: 18px;
+
+  background: #fff8e3;
+
+  border: 1px solid #ecd598;
+
+  border-radius: 8px;
+}
+
+
+.job-attention strong {
+  display: block;
+
+  color: #93630d;
+}
+
+
+.job-attention span {
+  display: block;
+
+  color: #766945;
+
+  font-size: 12px;
+
+  margin-top: 6px;
+}
+
+
+.job-apply-button {
+  width: 100%;
+
+  margin-top: 20px;
+
+  border: none;
+
+  background: #356bb0;
+
+  color: white;
+
+  padding: 16px;
+
+  border-radius: 7px;
+
+  font-weight: 900;
+}
+
+
+.job-small-note {
+  text-align: center;
+
+  font-size: 9px;
+
+  color: #aaa;
+
+  margin-top: 12px;
+}
+
+
+/* =========================================================
+   求人診断
+========================================================= */
+
+.scan-page {
+  min-height: 100vh;
+
+  background: #f5f7fa;
+}
+
+
+.scan-header {
+  height: 68px;
+
+  background: white;
+
+  border-bottom: 1px solid #ddd;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 6%;
+}
+
+
+.scan-logo {
+  font-size: 24px;
+
+  font-weight: 900;
+}
+
+
+.scan-status-head {
+  color: #47805f;
+
+  font-size: 10px;
+
+  font-weight: 800;
+}
+
+
+.scan-main {
+  width: min(720px, 92%);
+
+  margin: 75px auto;
+
+  background: white;
+
+  border-radius: 13px;
+
+  padding: 42px;
+
+  box-shadow:
+    0 10px 35px rgba(0,0,0,.08);
+}
+
+
+.scan-label {
+  color: #356bb0;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+
+.scan-main h1 {
+  font-size: 32px;
+
+  line-height: 1.45;
+}
+
+
+.scan-main > p {
+  color: #666;
+
+  line-height: 1.7;
+}
+
+
+.scan-list {
+  margin-top: 25px;
+}
+
+
+.scan-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 18px 0;
+
+  border-bottom: 1px solid #ebedf0;
+}
+
+
+.ok {
+  color: #328458;
+}
+
+
+#scan-reward {
+  color: #777;
+}
+
+
+.match-result {
+  margin-top: 25px;
+
+  padding: 20px;
+
+  background: #fff8ed;
+
+  border: 1px solid #ead29a;
+
+  border-radius: 8px;
+}
+
+
+.match-title {
+  font-weight: 900;
+
+  color: #8a6418;
+}
+
+
+.match-salary {
+  font-size: 29px;
+
+  font-weight: 900;
+
+  color: #c45b1a;
+
+  margin-top: 7px;
+}
+
+
+.scan-action {
+  margin-top: 20px;
+
+  width: 100%;
+
+  padding: 16px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #c25c20;
+
+  color: white;
+
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   特別案件
+========================================================= */
+
+.offer-page {
+  min-height: 100vh;
+
+  background:
+    linear-gradient(
+      180deg,
+      #eef1f4,
+      #e7ebef
+    );
+}
+
+
+.offer-header {
+  background: #35649c;
+
+  color: white;
+
+  padding: 19px 6%;
+
+  font-weight: 900;
+}
+
+
+.offer-panel {
+  width: min(680px, 92%);
+
+  margin: 40px auto;
+
+  background: white;
+
+  padding: 34px;
+
+  border-radius: 13px;
+
+  box-shadow:
+    0 12px 42px rgba(0,0,0,.13);
+}
+
+
+.premium-label {
+  display: inline-block;
+
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  background: #fff1d7;
+
+  color: #a36211;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+
+.offer-small-title {
+  margin-top: 18px;
+
+  color: #666;
+}
+
+
+.huge-salary {
+  margin-top: 5px;
+
+  font-size: 59px;
+
+  font-weight: 900;
+
+  line-height: 1;
+
+  color: #c75b20;
+}
+
+
+.huge-salary small {
+  font-size: 18px;
+
+  color: #555;
+
+  margin-right: 5px;
+}
+
+
+.huge-salary span {
+  font-size: 23px;
+
+  margin-left: 3px;
+}
+
+
+.offer-highlight {
+  margin-top: 13px;
+
+  font-size: 18px;
+
+  font-weight: 900;
+}
+
+
+.offer-checks {
+  display: grid;
+
+  gap: 7px;
+
+  margin-top: 20px;
+
+  color: #555;
+}
+
+
+.deadline-box {
+  margin-top: 27px;
+
+  padding: 23px;
+
+  text-align: center;
+
+  background: #fff0ef;
+
+  border: 2px solid #d4514d;
+
+  border-radius: 10px;
+}
+
+
+.deadline-label {
+  color: #8e2b2a;
+
+  font-size: 13px;
+
+  font-weight: 900;
+}
+
+
+.countdown {
+  margin-top: 8px;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 64px;
+
+  line-height: 1;
+
+  font-weight: 900;
+
+  letter-spacing: 3px;
+
+  color: #be0000;
+}
+
+
+.deadline-note {
+  margin-top: 8px;
+
+  font-size: 11px;
+
+  color: #8a5555;
+}
+
+
+.remaining-box {
+  margin-top: 13px;
+
+  background: #fff8e0;
+
+  padding: 15px;
+
+  border-radius: 8px;
+
+  text-align: center;
+
+  color: #715c1b;
+}
+
+
+.remaining-box strong {
+  color: #c35e0b;
+
+  font-size: 20px;
+
+  margin-left: 7px;
+}
+
+
+.fake-apply-area {
+  margin-top: 25px;
+
+  padding: 22px;
+
+  border: 1px solid #ddd;
+
+  border-radius: 9px;
+}
+
+
+.fake-apply-title {
+  font-size: 18px;
+
+  font-weight: 900;
+}
+
+
+.fake-apply-area p {
+  color: #666;
+
+  line-height: 1.7;
+}
+
+
+.fake-field {
+  padding: 14px;
+
+  border: 1px solid #ccc;
+
+  border-radius: 6px;
+
+  background: #fafafa;
+
+  color: #aaa;
+
+  margin-top: 11px;
+}
+
+
+#final-warning-button {
+  width: 100%;
+
+  margin-top: 15px;
+
+  padding: 16px;
+
+  border: none;
+
+  background: #ce4b34;
+
+  color: white;
+
+  border-radius: 7px;
+
+  font-weight: 900;
+}
+
+
+.offer-footer {
+  text-align: center;
+
+  color: #bbb;
+
+  font-size: 9px;
+
+  margin-top: 18px;
+}
+
+
+/* =========================================================
+   緊急状態
+========================================================= */
+
+.offer-panel.urgent .deadline-box {
+  background: #ffe3e1;
+
+  border-color: #b90000;
+
+  box-shadow:
+    0 0 25px rgba(190,0,0,.14);
+}
+
+
+.offer-panel.urgent .countdown {
+  color: #a40000;
+
+  transform: scale(1.05);
+}
+
+
+/* =========================================================
+   解説
+========================================================= */
+
+.reveal-page,
+.quiz-page,
+.final-page,
+.end-page {
+  width: min(900px, 92%);
+
+  margin: auto;
+
+  padding: 75px 0;
+}
+
+
+.reveal-badge,
+.complete {
+  display: inline-block;
+
+  padding: 7px 13px;
+
+  border-radius: 20px;
+
+  background: #356bb0;
+
+  color: white;
+
+  font-size: 10px;
+
+  letter-spacing: 1px;
+
+  font-weight: 900;
+}
+
+
+.reveal-page h1,
+.quiz-page h1,
+.final-page h1,
+.end-page h1 {
+  font-size: 42px;
+
+  margin: 18px 0 32px;
+}
+
+
+.reveal-main {
+  background: white;
+
+  border-left: 7px solid #356bb0;
+
+  padding: 30px;
+
+  border-radius: 11px;
+
+  box-shadow:
+    0 6px 25px rgba(0,0,0,.06);
+}
+
+
+.reveal-title {
+  font-size: 24px;
+
+  line-height: 1.7;
+}
+
+
+.reveal-title strong {
+  color: #c8473e;
+}
+
+
+.reveal-main p {
+  color: #666;
+
+  line-height: 1.8;
+}
+
+
+.explain-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 15px;
+}
+
+
+.explain-box {
+  background: white;
+
+  padding: 24px;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 5px 20px rgba(0,0,0,.06);
+}
+
+
+.explain-number {
+  width: 35px;
+
+  height: 35px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e8f1fc;
+
+  color: #356bb0;
+
+  font-weight: 900;
+}
+
+
+.explain-box h3 {
+  margin-bottom: 8px;
+}
+
+
+.explain-box p {
+  color: #666;
+
+  line-height: 1.7;
+}
+
+
+.main-button {
+  margin-top: 28px;
+
+  padding: 15px 28px;
+
+  background: #356bb0;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 7px;
+
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   クイズ
+========================================================= */
+
+.quiz-label {
+  color: #356bb0;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+
+.quiz-counter {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-bottom: 14px;
+
+  color: #666;
+
+  font-size: 13px;
+}
+
+
+.quiz-card {
+  background: white;
+
+  padding: 35px;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 8px 30px rgba(0,0,0,.07);
+}
+
+
+.quiz-card h2 {
+  line-height: 1.7;
+}
+
+
+.quiz-option {
+  display: block;
+
+  width: 100%;
+
+  margin-top: 12px;
+
+  padding: 16px;
+
+  border: 2px solid #ddd;
+
+  background: white;
+
+  border-radius: 8px;
+
+  text-align: left;
+
+  transition:
+    border-color .15s,
+    transform .15s;
+}
+
+
+.quiz-option:hover {
+  border-color: #356bb0;
+
+  transform: translateY(-1px);
+}
+
+
+.quiz-option.correct {
+  background: #effaf3;
+
+  border-color: #38a065;
+}
+
+
+.quiz-option.wrong {
+  background: #fff2f0;
+
+  border-color: #d44c42;
+}
+
+
+.quiz-result {
+  margin-top: 20px;
+
+  background: #eef5ff;
+
+  border-radius: 8px;
+
+  padding: 20px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   正解演出
+========================================================= */
+
+.reward-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background:
+    rgba(0,0,0,.17);
+
+  z-index: 9998;
+}
+
+
+.reward-popup {
+  position: fixed;
+
+  left: 50%;
+
+  top: 50%;
+
+  transform:
+    translate(-50%, -50%)
+    scale(.7);
+
+  opacity: 0;
+
+  z-index: 9999;
+
+  background: white;
+
+  border: 3px solid #3da267;
+
+  border-radius: 17px;
+
+  padding: 30px 40px;
+
+  text-align: center;
+
+  box-shadow:
+    0 18px 55px rgba(0,0,0,.25);
+
+  animation:
+    rewardShow .75s ease forwards;
+}
+
+
+.reward-main {
+  color: #208b4d;
+
+  font-size: 30px;
+
+  font-weight: 900;
+}
+
+
+.reward-point {
+  margin-top: 6px;
+
+  color: #356bb0;
+
+  font-weight: 900;
+}
+
+
+.reward-message {
+  margin-top: 10px;
+
+  color: #666;
+
+  line-height: 1.5;
+}
+
+
+@keyframes rewardShow {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translate(-50%, -50%)
+      scale(.7);
+  }
+
+  60% {
+    opacity: 1;
+
+    transform:
+      translate(-50%, -50%)
+      scale(1.08);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translate(-50%, -50%)
+      scale(1);
+  }
+
+}
+
+
+/* =========================================================
+   クイズクリア
+========================================================= */
+
+.clear-page {
+  width: min(850px, 92%);
+
+  min-height: 100vh;
+
+  margin: auto;
+
+  padding: 80px 0;
+
+  text-align: center;
+}
+
+
+.clear-badge {
+  display: inline-block;
+
+  padding: 8px 15px;
+
+  background: #356bb0;
+
+  color: white;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+
+  font-weight: 900;
+}
+
+
+.clear-icon {
+  width: 95px;
+
+  height: 95px;
+
+  margin: 35px auto 18px;
+
+  border-radius: 50%;
+
+  background: #38a065;
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 52px;
+
+  font-weight: 900;
+}
+
+
+.clear-page h1 {
+  font-size: 50px;
+
+  margin: 0;
+}
+
+
+.clear-score {
+  margin-top: 13px;
+
+  color: #356bb0;
+
+  font-size: 62px;
+
+  font-weight: 900;
+}
+
+
+.clear-score small {
+  font-size: 24px;
+
+  color: #888;
+}
+
+
+.clear-message {
+  color: #666;
+}
+
+
+.memory-point {
+  max-width: 650px;
+
+  margin: 30px auto;
+
+  background: white;
+
+  padding: 27px;
+
+  border-radius: 13px;
+
+  border-top: 5px solid #356bb0;
+
+  box-shadow:
+    0 8px 30px rgba(0,0,0,.07);
+}
+
+
+.memory-title {
+  font-size: 12px;
+
+  font-weight: 900;
+
+  color: #777;
+}
+
+
+.memory-text {
+  margin-top: 10px;
+
+  font-size: 24px;
+}
+
+
+.memory-text strong {
+  color: #356bb0;
+}
+
+
+.memory-point p {
+  color: #666;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   怪しいと感じた場所
+========================================================= */
+
+.feeling-box {
+  max-width: 750px;
+
+  margin: 30px auto 0;
+
+  background: white;
+
+  padding: 28px;
+
+  border-radius: 13px;
+
+  box-shadow:
+    0 8px 30px rgba(0,0,0,.07);
+
+  text-align: left;
+}
+
+
+.feeling-box h2 {
+  margin-top: 0;
+}
+
+
+.feeling-box p {
+  color: #666;
+}
+
+
+#feeling-options {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 10px;
+}
+
+
+.feeling-option {
+  padding: 14px;
+
+  background: #f8fafc;
+
+  border: 2px solid #dce2e8;
+
+  border-radius: 8px;
+
+  text-align: left;
+}
+
+
+.feeling-option:hover {
+  border-color: #356bb0;
+}
+
+
+.feeling-option.selected {
+  border-color: #356bb0;
+
+  background: #eef5ff;
+}
+
+
+.feeling-result {
+  margin-top: 15px;
+
+  padding: 15px;
+
+  background: #eef5ff;
+
+  border-radius: 7px;
+
+  color: #3f5f85;
+}
+
+
+/* =========================================================
+   最終シミュレーション
+========================================================= */
+
+.final-lead {
+  color: #666;
+
+  line-height: 1.8;
+}
+
+
+.message-card {
+  background: white;
+
+  padding: 30px;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 8px 30px rgba(0,0,0,.07);
+}
+
+
+.message-title {
+  font-size: 21px;
+
+  font-weight: 900;
+
+  margin-bottom: 20px;
+}
+
+
+.message-card p {
+  color: #555;
+
+  line-height: 1.8;
+}
+
+
+.message-link {
+  display: inline-block;
+
+  background: #356bb0;
+
+  color: white;
+
+  padding: 12px 20px;
+
+  border-radius: 6px;
+}
+
+
+.final-options {
+  display: grid;
+
+  gap: 12px;
+}
+
+
+.final-option {
+  padding: 17px;
+
+  border: 2px solid #ddd;
+
+  background: white;
+
+  border-radius: 8px;
+
+  text-align: left;
+
+  transition:
+    border-color .15s,
+    transform .15s;
+}
+
+
+.final-option:hover {
+  border-color: #356bb0;
+
+  transform: translateY(-1px);
+}
+
+
+.final-result {
+  margin-top: 20px;
+
+  padding: 20px;
+
+  background: #eef5ff;
+
+  border-radius: 8px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   エンディング
+========================================================= */
+
+.end-page {
+  text-align: center;
+}
+
+
+.end-lead {
+  color: #666;
+
+  font-size: 18px;
+
+  line-height: 1.8;
+}
+
+
+.end-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 15px;
+
+  margin-top: 32px;
+}
+
+
+.end-grid > div {
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 10px;
+
+  text-align: left;
+}
+
+
+.end-grid p {
+  color: #666;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   コード解説
+========================================================= */
+
+.code-learning {
+  margin-top: 45px;
+
+  background: #f7f9fc;
+
+  padding: 30px;
+
+  text-align: left;
+
+  border-radius: 12px;
+}
+
+
+.learning-item {
+  background: white;
+
+  margin-top: 18px;
+
+  padding: 22px;
+
+  border-radius: 9px;
+}
+
+
+.learning-label {
+  display: inline-block;
+
+  padding: 5px 9px;
+
+  background: #27384f;
+
+  color: white;
+
+  border-radius: 4px;
+
+  font-size: 10px;
+
+  font-weight: 900;
+}
+
+
+.learning-item h3 {
+  margin-bottom: 5px;
+}
+
+
+.learning-item p {
+  color: #666;
+
+  line-height: 1.8;
+}
+
+
+.learning-item code {
+  display: block;
+
+  padding: 14px;
+
+  background: #17212d;
+
+  color: #d5f4e0;
+
+  border-radius: 6px;
+
+  overflow-x: auto;
+
+  font-family:
+    "Courier New",
+    monospace;
+}
+
+
+.flow {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+}
+
+
+.flow span {
+  padding: 10px 13px;
+
+  background: #eef5ff;
+
+  border-radius: 7px;
+
+  font-size: 12px;
+}
+
+
+.flow b {
+  color: #356bb0;
+}
+
+
+/* =========================================================
+   研究まとめ
+========================================================= */
+
+.research-note {
+  margin-top: 30px;
+
+  padding: 30px;
+
+  background: #eef5ff;
+
+  border-radius: 11px;
+
+  text-align: left;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   出典
+========================================================= */
+
+.sources {
+  margin-top: 30px;
+
+  padding: 30px;
+
+  background: white;
+
+  border: 1px solid #ddd;
+
+  border-radius: 11px;
+
+  text-align: left;
+}
+
+
+.sources p {
+  color: #555;
+
+  line-height: 1.8;
+}
+
+
+.sources a {
+  color: #356bb0;
+
+  word-break: break-all;
+}
+
+
+.source-note {
+  color: #888 !important;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   スマートフォン
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .portal-nav {
+    display: none;
+  }
+
+  .portal-main {
+    grid-template-columns: 1fr;
+  }
+
+  .portal-search {
+    display: block;
+  }
+
+  .search-logo {
+    margin-bottom: 14px;
+  }
+
+  .hero-news {
+    grid-template-columns: 1fr;
+  }
+
+  .job-info-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .explain-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #feeling-options {
+    grid-template-columns: 1fr;
+  }
+
+  .end-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reveal-page h1,
+  .quiz-page h1,
+  .final-page h1,
+  .end-page h1 {
+    font-size: 32px;
+  }
+
+  .huge-salary {
+    font-size: 47px;
+  }
+
+  .countdown {
+    font-size: 47px;
+  }
+
+  .offer-panel,
+  .job-card,
+  .scan-main {
+    padding: 25px;
+  }
+
+  .clear-page h1 {
+    font-size: 40px;
+  }
+
+  .clear-score {
+    font-size: 50px;
+  }
+
+  .reward-popup {
+    width: 90%;
+    padding: 25px;
+  }
+
+}
